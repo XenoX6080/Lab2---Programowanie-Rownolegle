@@ -37,7 +37,7 @@ class Program
         var progress = new Progress<int>(percent =>
         {
             Console.SetCursorPosition(0, Console.CursorTop);
-            Console.Write($"Postęp: {percent}%   "); 
+            Console.Write($"Postęp: {percent}%   \n"); 
         });
 
         try
