@@ -1,4 +1,4 @@
-﻿internal class CubicFunction : IFunction
+﻿internal class Function3 : IFunction
 {
     public string Name => "y = 3x^2 + 2x - 3";
 

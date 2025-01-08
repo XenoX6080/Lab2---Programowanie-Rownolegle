@@ -1,4 +1,4 @@
-﻿internal class LinearFunction : IFunction
+﻿internal class Function1 : IFunction
 {
     public string Name => "y = 2x + 2x^2";
 

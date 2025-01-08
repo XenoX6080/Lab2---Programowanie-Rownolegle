@@ -1,4 +1,4 @@
-﻿internal class QuadraticFunction : IFunction
+﻿internal class Function2 : IFunction
 {
     public string Name => "y = 2x^2 + 3";
 

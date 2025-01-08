@@ -1,6 +1,7 @@
-﻿internal class TrapezoidalMethod : IMethod
+﻿
+internal class RectangularMiddleMethod : IMethod
 {
-    public string Name => "Trapezoidal Method";
+    public string Name => "Rectangular (middle) Method";
 
     public double Integrate(IFunction function, double start, double end, int steps, IProgress<int> progress, CancellationToken token)
     {
@@ -28,7 +29,7 @@
 
                         double current = start + j * stepSize; // Pozycja x
                         double next = current + stepSize; // Następna pozycja x
-                        double localResult = (function.GetY(current) + function.GetY(next)) * stepSize / 2.0; // Liczenie trapezoidalne
+                        double localResult = function.GetY((current + next) / 2.0) * stepSize; // Liczenie prostokątne
 
                         lock (lockObject)
                         {
@@ -48,6 +49,6 @@
                 });
             });
 
-        return result; 
+        return result;
     }
 }
